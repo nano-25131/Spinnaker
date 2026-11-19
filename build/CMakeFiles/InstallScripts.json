@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"E:/tmp/Spinnaker/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
