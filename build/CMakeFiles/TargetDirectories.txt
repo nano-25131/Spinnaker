@@ -1,3 +1,0 @@
-E:/tmp/Spinnaker/build/CMakeFiles/SpinnakerAcquisition.dir
-E:/tmp/Spinnaker/build/CMakeFiles/ALL_BUILD.dir
-E:/tmp/Spinnaker/build/CMakeFiles/ZERO_CHECK.dir

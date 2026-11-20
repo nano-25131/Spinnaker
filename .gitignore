@@ -4,8 +4,10 @@
 *.suo
 *.VC.db
 *.VC.opendb
+*.aps
 
 # Build outputs
+[Bb]uild/
 [Bb]in/
 [Oo]bj/
 Debug/
@@ -13,7 +15,22 @@ Release/
 x64/
 x86/
 *.exe
+*.dll
+*.pdb
+*.ilk
+*.obj
 *.log
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+
+# 程序启动时的权限检查临时文件
+test.txt
+
+# 采集到的图片（别把实验数据传上去）
+*.png
+*.png.part
 
 # OS
 Thumbs.db
