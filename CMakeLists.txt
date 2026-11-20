@@ -7,12 +7,24 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # ---------------------------
 # 源文件
 # ---------------------------
-set(SOURCE_FILE "${CMAKE_SOURCE_DIR}/Acquisition.cpp")
-if(NOT EXISTS "${SOURCE_FILE}")
-    message(FATAL_ERROR "Required source not found: ${SOURCE_FILE}")
-endif()
+set(APP_SOURCES
+    main.cpp
+    acquisition.cpp
+    async_writer.cpp
+    camera_setup.cpp
+    config.cpp
+    console_ctrl.cpp
+    file_naming.cpp
+    overlay.cpp
+    text_utils.cpp
+)
+foreach(_src IN LISTS APP_SOURCES)
+    if(NOT EXISTS "${CMAKE_SOURCE_DIR}/${_src}")
+        message(FATAL_ERROR "Required source not found: ${CMAKE_SOURCE_DIR}/${_src}")
+    endif()
+endforeach()
 add_executable(${PROJECT_NAME}
-    "${SOURCE_FILE}"
+    ${APP_SOURCES}
     "app.rc"           # 图标资源
 )
 

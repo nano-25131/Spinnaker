@@ -1,37 +1,17 @@
-# Visual Studio
+# 构建产物
+build/
 .vs/
 *.user
 *.suo
-*.VC.db
-*.VC.opendb
-*.aps
 
-# Build outputs
-[Bb]uild/
-[Bb]in/
-[Oo]bj/
-Debug/
-Release/
-x64/
-x86/
-*.exe
-*.dll
-*.pdb
-*.ilk
-*.obj
-*.log
-
-# CMake
-CMakeCache.txt
-CMakeFiles/
-
-# 程序启动时的权限检查临时文件
-test.txt
-
-# 采集到的图片（别把实验数据传上去）
+# 测试时保存的图片和临时文件
 *.png
 *.png.part
+test.txt
+acquisition.log
+log.csv
 
-# OS
-Thumbs.db
-Desktop.ini
+# Spinnaker SDK（Teledyne 的专有文件，体积大，也不适合上传到 GitHub）
+include/
+lib64/
+bin64/
