@@ -15,3 +15,10 @@ log.csv
 include/
 lib64/
 bin64/
+
+# Visual Studio temporary files
+*.aps
+.vs/
+*.suo
+*.user
+*.cache
