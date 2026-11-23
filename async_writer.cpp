@@ -116,6 +116,7 @@ void AsyncImageWriter::Run()
 					if (!removed || ec)
 					{
 						WriteResult r;
+						r.path = job.path;
 						r.id = job.id;
 						r.ok = false;
 						r.isDelete = true;
@@ -127,6 +128,7 @@ void AsyncImageWriter::Run()
 			else
 			{
 				WriteResult r;
+				r.path = job.path;
 				r.id = job.id;
 				r.ok = ok;
 				r.reason = err;

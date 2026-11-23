@@ -20,6 +20,7 @@ struct SaveJob
 // 后台线程完成一次写盘后的结果，由主线程取走并显示在预览画面上
 struct WriteResult
 {
+	fs::path path;		   // 这张图的完整路径（运行中切换保存目录后，靠它区分结果属于哪个目录）
 	long long id = 0;
 	bool ok = true;
 	bool isDelete = false; // true = 写盘期间被用户删除，但删除文件失败

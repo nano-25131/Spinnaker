@@ -15,8 +15,10 @@ set(APP_SOURCES
     config.cpp
     console_ctrl.cpp
     file_naming.cpp
+    folder_dialog.cpp
     overlay.cpp
     text_utils.cpp
+    text_render.cpp
 )
 foreach(_src IN LISTS APP_SOURCES)
     if(NOT EXISTS "${CMAKE_SOURCE_DIR}/${_src}")
@@ -83,6 +85,11 @@ else()
         "${SPINNAKER_DIR}/lib/libGenApi*.so*"
     )
     target_link_libraries(${PROJECT_NAME} PRIVATE ${SPINNAKER_LIBS} pthread)
+endif()
+
+# 选择文件夹对话框（folder_dialog.cpp）需要的系统库
+if(WIN32)
+    target_link_libraries(${PROJECT_NAME} PRIVATE ole32 shell32 uuid)
 endif()
 
 # ---------------------------

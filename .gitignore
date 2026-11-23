@@ -21,4 +21,4 @@ bin64/
 .vs/
 *.suo
 *.user
-*.cache
+*.cache.vscode/
